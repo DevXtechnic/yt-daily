@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# yt-daily Installer Script
+# Ytdaily Installer Script
 # Works on Arch, Debian/Ubuntu, Fedora
 
 set -e
@@ -10,7 +10,7 @@ GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}🚀 Starting yt-daily installation...${NC}"
+echo -e "${BLUE}🚀 Starting Ytdaily installation...${NC}"
 
 # 1. Detect Package Manager and Install System Dependencies
 echo -e "${BLUE}🔍 Checking for system dependencies...${NC}"
@@ -52,7 +52,7 @@ if ! python3 -c "import rich" &>/dev/null; then
 fi
 
 # 3. Create Application Directory
-INSTALL_DIR="$HOME/.local/share/yt-daily"
+INSTALL_DIR="$HOME/.local/share/Ytdaily"
 BIN_DIR="$HOME/.local/bin"
 echo -e "${BLUE}📂 Creating directories in $INSTALL_DIR...${NC}"
 mkdir -p "$INSTALL_DIR"
@@ -105,7 +105,7 @@ mkdir -p "$HOME/.config/systemd/user"
 # Create Service
 cat <<EOF > "$HOME/.config/systemd/user/ytdaily.service"
 [Unit]
-Description=yt-daily Feed Downloader
+Description=Ytdaily Feed Downloader
 After=network-online.target
 
 [Service]

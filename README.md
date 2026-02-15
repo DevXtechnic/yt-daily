@@ -1,4 +1,4 @@
-# 📺 yt-daily
+# 📺 Ytdaily
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![Platform: Linux](https://img.shields.io/badge/platform-Linux-orange.svg)](https://www.kernel.org/)
@@ -50,8 +50,8 @@ Every download is automatically scrubbed of non-content segments (Sponsors, Intr
 Designed to work across **Arch, Debian, Ubuntu, and Fedora** based distributions. The installer handles system dependencies, Python environment isolation (PEP 668), and shell integration.
 
 ```bash
-git clone https://github.com/DevXtechnic/yt-daily.git
-cd yt-daily
+git clone https://github.com/DevXtechnic/Ytdaily.git
+cd Ytdaily
 chmod +x install.sh
 ./install.sh
 ```
