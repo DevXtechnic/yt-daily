@@ -14,14 +14,30 @@ echo -e "${BLUE}🚀 Starting yt-daily installation...${NC}"
 
 # 1. Detect Package Manager and Install System Dependencies
 echo -e "${BLUE}🔍 Checking for system dependencies...${NC}"
-if command -v pacman >/dev/null; then
-    # Arch Linux - Prefer system packages over pip
-    sudo pacman -S --needed --noconfirm yt-dlp ffmpeg python-rich
-elif command -v apt-get >/dev/null; then
+
+# Function to check if a command exists
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
+
+if command_exists pacman; then
+    # Arch Linux
+    TO_INSTALL=""
+    command_exists yt-dlp || TO_INSTALL="$TO_INSTALL yt-dlp"
+    command_exists ffmpeg || TO_INSTALL="$TO_INSTALL ffmpeg"
+    python3 -c "import rich" &>/dev/null || TO_INSTALL="$TO_INSTALL python-rich"
+    
+    if [ -n "$TO_INSTALL" ]; then
+        echo -e "${BLUE}📦 Installing missing packages via pacman:$TO_INSTALL...${NC}"
+        sudo pacman -S --needed --noconfirm $TO_INSTALL
+    else
+        echo -e "${GREEN}✅ System dependencies already satisfied.${NC}"
+    fi
+elif command_exists apt-get; then
     # Debian/Ubuntu
     sudo apt-get update
     sudo apt-get install -y yt-dlp ffmpeg python3-rich
-elif command -v dnf >/dev/null; then
+elif command_exists dnf; then
     # Fedora
     sudo dnf install -y yt-dlp ffmpeg python3-rich
 else
