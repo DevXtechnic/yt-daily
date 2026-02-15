@@ -1,4 +1,4 @@
-# YTDaily
+# yt-daily
 
 A powerful, interactive YouTube Feed Downloader that monitors channels and playlists for new content and downloads them automatically in 720p MP4 format with subtitles, SponsorBlock, and parallel download support.
 
