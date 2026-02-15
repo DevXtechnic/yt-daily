@@ -1,0 +1,7 @@
+# Add this to your ~/.bashrc or ~/.zshrc
+
+# Helper alias for YTDaily
+alias ytdaily='python3 /path/to/YT_daily.py --interactive'
+
+# Optional: Add to PATH if you prefer
+# export PATH="$PATH:/path/to/YTDaily/directory"

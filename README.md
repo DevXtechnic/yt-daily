@@ -44,6 +44,23 @@ Run the script in interactive mode to manage your channels and settings:
 python3 YT_daily.py --interactive
 ```
 
+### Shell Alias (Recommended)
+
+To run the script conveniently from any directory, add an alias to your shell configuration (`.bashrc`, `.zshrc`, or `config.fish`). 
+
+Example for **Bash/Zsh**:
+```bash
+alias ytdaily='python3 /path/to/YT_daily.py --interactive'
+```
+
+Example for **Fish**:
+```fish
+function ytdaily
+    python3 /path/to/YT_daily.py --interactive
+end
+```
+(See `shell_configs/` for more templates)
+
 ### Options:
 - **Run automatic download**: Checks all monitored channels for new videos.
 - **Manage channels**: Add or remove YouTube channels by their handle or ID.
