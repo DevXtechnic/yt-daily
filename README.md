@@ -38,7 +38,7 @@
 The engine maintains a local JSON database of every video it has ever encountered. When a scan starts, it fetches the latest activity from your monitored channels and compares signatures to identify "Gaps" in your collection.
 
 ### 2. Parallel Processing Engine
-Unlike traditional downloaders that process one file at a time, `yt-daily` utilizes a multi-threaded parallel downloader. It intelligently distributes your bandwidth across multiple streams to finish your daily queue in minutes rather than hours.
+Unlike traditional downloaders that process one file at a time, `Ytdaily` utilizes a multi-threaded parallel downloader. It intelligently distributes your bandwidth across multiple streams to finish your daily queue in minutes rather than hours.
 
 ### 3. The SponsorBlock Integration
 Every download is automatically scrubbed of non-content segments (Sponsors, Intros, Outros, Interaction Reminders) using the SponsorBlock API, saving you hours of watch time.
